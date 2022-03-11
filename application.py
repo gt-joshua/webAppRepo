@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import random
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 textDict = {
@@ -11,8 +11,12 @@ textDict = {
 5: 'It is pitch dark. You are likely to be eaten by a grue.'}
     
 
-@app.route('/')
+@application.route('/')
 def index():
     value = random.randint(1,5)
     randomText=textDict[value]    
     return render_template("index.html",randomText=randomText)
+
+
+if __name__ == "__main__":
+    application.run(port=8000)
