@@ -1,1 +1,5 @@
-/*.spyproject*  !/static!/static/*!/templates
+#ignore all these files and folders
+/env*
+.DS_Store
+.spyproject*
+__pycache__*
